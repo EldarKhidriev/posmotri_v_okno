@@ -48,9 +48,9 @@ ol {
   align-items: end;
   gap: 30px;
   min-width: 1140px;
-  max-height: 534px;
+  min-height: 534px;
 
-  margin: 133px auto;
+  margin: 133px auto auto auto;
 }
 
 .search-form {
