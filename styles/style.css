@@ -49,7 +49,6 @@ ol {
   gap: 30px;
   min-width: 1140px;
 
-
   margin: auto;
 }
 
@@ -68,16 +67,18 @@ ol {
   min-width: 399px;
   /* min-height: 531px; */
   /* padding-bottom: 23px; */
-  
 }
 
 .content__list {
   position: relative;
   max-width: 399px;
-  max-height: 298px;
-  overflow: scroll;
-  overflow-x: auto;
+  /* строгая высота сделана для того, чтобы заголовок 
+  не сьезжал вниз в случае пустого списка */
+  height: 298px;
+  overflow: auto;
+  /* overflow-x: auto; */
   margin-top: 23px;
+  min-width: max-content;
 }
 
 .result__video-container {
@@ -115,18 +116,22 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  min-width: 200px;
+  min-height: 101px;
 }
 
 .title {
-  font-family: "Oswald",sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 0.935em;
   text-transform: uppercase;
+  margin-top: a;
 }
 
 .content__accent {
   color: #545050;
+  margin-bottom: 1500px;
 }
 
 .search-form__fieldset-title {
@@ -187,7 +192,7 @@ ol {
 .search-form__label {
   width: fit-content;
   cursor: pointer;
-  align-content:center
+  align-content: center;
   /* border-top: 1px solid #fff;
   border-bottom: 1px solid #fff; */
 }
@@ -206,7 +211,7 @@ ol {
   min-height: 34px;
   border: 1px solid #fff;
   color: #fff;
-  font-family: "Fira Sans Condensed",sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
@@ -239,7 +244,7 @@ ol {
   border-bottom: 1px solid #fff;
   /* text-align: start; */
   padding-left: 0;
-  font-family: "Fira Sans Condensed",sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #fff;
@@ -293,13 +298,6 @@ ol {
   text-decoration: underline;
 }
 
-.content__list {
-  /* display: flex;
-  flex-direction: column;
-  align-items: end; */
-  min-width: max-content;
-}
-
 .content__list-item {
   min-height: 107px;
   cursor: pointer;
@@ -314,18 +312,9 @@ ol {
   background-color: #545050;
 }
 
-
-
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
-
-.content__video-card-description-фcontainer {
-  min-width: 200px;
-  min-height: 101px;
-}
-
-
+} */
 
 .content__video-card-description {
   /* font-family: 'O'; */
